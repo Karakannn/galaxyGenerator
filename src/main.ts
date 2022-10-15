@@ -4,10 +4,8 @@ import { GUI } from 'dat.gui';
 import * as THREE from 'three'
 
 import './style.css'
-import { text } from 'stream/consumers';
 
 
-const webGLCanvas: any = document.querySelector('canvas.webgl')
 const gui = new GUI({ width: 400 })
 /**
  * Base
@@ -168,11 +166,9 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 /**
  * Animate
  */
-const clock = new THREE.Clock()
 
 const tick = () =>
 {
-    const elapsedTime = clock.getElapsedTime()
 
     // Update controls
     controls.update()
